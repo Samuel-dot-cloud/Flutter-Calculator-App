@@ -26,7 +26,6 @@ class CalculatorBrain {
       isPressedPercentageButton = true;
 
       if (_output.contains('-', 0)) {
-        print('Already contains a minus');
         _output += '';
         output = _output;
         resultOperationText = output;
@@ -63,11 +62,9 @@ class CalculatorBrain {
       operator = buttonText;
       resultOperationText = operator;
       isPressedPercentageButton = false;
-      print(operator);
       _output = '';
     } else if (buttonText == '.') {
       if (_output.contains('.')) {
-        print('Already contains a decimal');
         _output += '';
         output = _output;
         resultOperationText = output;
@@ -118,7 +115,6 @@ class CalculatorBrain {
       resultOperationText += buttonText;
     }
 
-    print(_output);
     return output;
   }
 }
